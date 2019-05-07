@@ -20,6 +20,7 @@ start_link() ->
   gen_server:start_link({local, ?MODULE}, ?MODULE, [], []).
 
 addUser(UserData, Uuid) ->
+    io:format("~n Pushing the User Data(Key value pair) to Worker pool for storing it in COUCH DB  - ~p~n",[UserData]),
     wpool:cast(db_pool, {add_user, UserData, Uuid}).
 
 init(_Args) ->

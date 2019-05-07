@@ -39,7 +39,9 @@ addUser(UData)->
 	nx1_db_worker:addUser(JUData, Uuid).
 
 create_cache()->
+	io:format("~n Creating the Cache for faster User Data(Key value pair) access using ETS -~n",[]),
 	ets:new(?Table, [named_table,public,set]).
 
 add_to_cache(AccountId,Record)->
+	io:format("~n Caching the User Data(Key value pair) using ETS - AccountId - ~p~n",[AccountId]),
 	ets:insert(?Table,{AccountId,Record}).

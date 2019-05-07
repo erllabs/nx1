@@ -6,6 +6,7 @@ init()->
 	ok.
 
 create_database()->
+	io:format("~n Creating the DATA BASE for User Data in COUCH DB- ~n",[]),
 	Url = get_url(),
 	AuthStr = get_auth(),
 	Method = put,
@@ -19,7 +20,7 @@ create_database()->
 	io:format("The result is ~p",[Res]).
 
 write(UserInfo,Uuid)->
-	io:format("Writing the document:~p",[{UserInfo,Uuid}]),
+	io:format("~n Writing the User Data to COUCH DB with KEY- ~p~n",[Uuid]),
 	Url = get_url(),
 	AuthStr = get_auth(),
 	Method = put,

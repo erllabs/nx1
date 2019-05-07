@@ -13,10 +13,12 @@ get_data()->
 	{<<"account_id">>, <<"10000000002FH">>}]}.
 
 addUser(UDataSerice) when is_tuple(UDataSerice) ->
+	io:format("~nConverting tuple to list ~n"),
 	addUser(erlang:tuple_to_list(UDataSerice));
 addUser(UDataSerice) when is_list(UDataSerice) ->
 	Process = 
 		fun(UData)->
+			io:format("~n Passing the single User Data(Key value pair) to Worker Pool ~p~n",[UData]),
 			nx1_db:addUser(UData)
 		end,
 	lists:foreach(Process,UDataSerice).
