@@ -1,0 +1,18 @@
+{"1.1.0",
+[{<<"jsx">>,{pkg,<<"jsx">>,<<"2.8.0">>},0},
+ {<<"quickrand">>,
+  {git,"https://github.com/okeuday/quickrand.git",
+       {ref,"1c60daa4b0edcec0a6b8310443574baac962ea88"}},
+  1},
+ {<<"uuid">>,
+  {git,"https://github.com/okeuday/uuid",
+       {ref,"23167ed8689f656ea6765572215a40b9856d7886"}},
+  0},
+ {<<"worker_pool">>,
+  {git,"https://github.com/inaka/worker_pool.git",
+       {ref,"edff5aead77231377d09eb59c055bf7c8c236aef"}},
+  0}]}.
+[
+{pkg_hash,[
+ {<<"jsx">>, <<"749BEC6D205C694AE1786D62CEA6CC45A390437E24835FD16D12D74F07097727">>}]}
+].

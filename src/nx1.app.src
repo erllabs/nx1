@@ -1,0 +1,17 @@
+{application, nx1,
+ [{description, "An OTP application"},
+  {vsn, "0.1.0"},
+  {registered, []},
+  {mod, {nx1_app, []}},
+  {applications,
+   [kernel,
+    stdlib,
+    worker_pool,
+    jsx
+   ]},
+  {env,[]},
+  {modules, []},
+
+  {licenses, ["Apache 2.0"]},
+  {links, []}
+ ]}.
